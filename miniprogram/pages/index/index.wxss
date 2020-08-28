@@ -1,0 +1,84 @@
+.card{
+  width: 100%;
+  height: 200px;
+  border-radius: 36rpx;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.1);
+  position: relative;
+  padding: 0 30rpx;
+}
+
+.card{
+  margin-top: 85rpx;
+}
+
+.personal-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar{
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 150rpx;
+  height: 150rpx;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 10rpx solid rgba(245, 245, 245, 0.8);
+}
+
+.avatar image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.1);
+  object-position: center;
+}
+
+.name{
+  font-size: 80rpx;
+  font-weight: 700;
+  transform: translateY(-10%);
+}
+
+.sum{
+  position: absolute;
+  bottom: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sum-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sum-item:first-child{
+  border-right: 1px solid #ddd;
+  padding-right: 40rpx;
+}
+
+.sum-item:last-child{
+  padding-left: 40rpx;
+}
+
+.donate{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.library{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 18px;
+}

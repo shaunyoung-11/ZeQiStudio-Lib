@@ -1,0 +1,26 @@
+<view class="body">
+  <view class="card personal-info">
+    <view class="avatar">
+      <image src="{{ avatarUrl }}"></image>
+    </view>
+    <view class="name">
+      {{ name }}
+    </view>
+    <view class="sum">
+      <view class="sum-item">
+        <text class="info-title">累计已借</text>
+        <text>{{ totalBorrow }}</text>
+      </view>
+      <view class="sum-item">
+        <text class="info-title">当前在借</text>
+        <text>{{ nowBorrow }}</text>
+      </view>
+    </view>
+  </view>
+  <view class="card donate">
+    图书捐赠
+  </view>
+  <view class="card library">
+    图书查询
+  </view>
+</view>

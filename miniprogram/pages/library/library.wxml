@@ -1,0 +1,27 @@
+<view class="body">
+  <view class="search">
+    <input class="search-text" type="text" placeholder="请输入书名搜索"></input>
+    <button class="search-btn">搜索</button>
+    <text class="logo">🔍</text>
+  </view>
+  <view class="book-container">
+    <view class="book">
+      <view class="book-cover">
+        <image src="http://ebook.jason-xy.online:8083/cover/105"></image>
+      </view>
+      <view class="book-info">
+        <view class="book-info-item">
+          <text class="book-name">书名</text>
+        </view>
+        <view class="book-info-item">
+          <text class="book-press">出版社</text>
+        </view>
+        <view class="book-info-item">
+          <text class="book-state book-state-y" wx:if="1">可借阅</text>
+          <text class="book-state book-state-n" wx:if="{{ 0 }}">已借出</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+  
