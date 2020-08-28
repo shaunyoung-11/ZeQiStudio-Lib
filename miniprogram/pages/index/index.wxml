@@ -23,4 +23,5 @@
   <view class="card library">
     图书查询
   </view>
+  <text class="scan" bindtap="scanCode">+</text>
 </view>

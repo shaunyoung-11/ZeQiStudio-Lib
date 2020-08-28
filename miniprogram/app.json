@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/library/library"
+    "pages/library/library",
+    "pages/donate/donate"
   ],
   "window": {
     "backgroundTextStyle": "light",

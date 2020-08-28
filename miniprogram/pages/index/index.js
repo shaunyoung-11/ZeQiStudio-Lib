@@ -65,5 +65,26 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  /**
+   * 扫描条形码，录入图书信息
+   */
+  scanCode: function(){
+    wx.scanCode({
+      onlyFromCamera: true,
+      scanType: "barCode",
+      success: (res)=>{
+        // res.result
+        var resp = res;
+        wx.request({
+          url: 'https://book.feelyou.top/isbn/' + resp.result,
+          method: 'GET',
+          success: (res)=>{
+            console.log(res)
+          }
+        })
+      }
+    })
   }
 })
