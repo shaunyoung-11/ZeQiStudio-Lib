@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    books: []
+    books: [],
+    key: "",
   },
 
   /**
@@ -14,6 +15,9 @@ Page({
   onLoad: function (options) {
     wx.showLoading({
       title: '加载中',
+    })
+    this.setData({
+      lib: options.lib
     })
     wx.cloud.callFunction({
       name: 'queryBooks',
@@ -76,6 +80,28 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  /**
+   * 搜索书籍
+   */
+  searchBook: function () {
+    wx.showLoading({
+      title: '搜索中',
+    })
+    wx.cloud.callFunction({
+      name: 'searchBook',
+      data:{
+        key: this.data.key,
+        lib: this.data.lib
+      }
+    }).then(res=>{
+      console.log(res)
+      this.setData({
+        books: res.result.data
+      })
+      wx.hideLoading()
+    })
   },
 
   /**

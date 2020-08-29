@@ -1,7 +1,7 @@
 <view class="body">
   <view class="search">
-    <input class="search-text" type="text" placeholder="请输入书名搜索"></input>
-    <button class="search-btn">搜索</button>
+    <input class="search-text" type="text" placeholder="请输入书名搜索" model:value="{{ key }}"></input>
+    <button class="search-btn" bindtap="searchBook">搜索</button>
     <text class="logo">🔍</text>
   </view>
   <view class="book-container">
