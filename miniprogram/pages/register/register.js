@@ -1,11 +1,13 @@
-// pages/library/library.js
+// miniprogram/pages/register/register.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    books: []
+    name: '',
+    phone: '',
+    lib: ''
   },
 
   /**
@@ -16,16 +18,15 @@ Page({
       title: '加载中',
     })
     wx.cloud.callFunction({
-      name: 'queryBooks',
-      data:{
-        lib: options.lib
-      }
+      name: 'queryUsr'
     }).then(res=>{
       console.log(res)
-      this.setData({
-        books: res.result.data
-      })
-      wx.hideLoading()
+      if(res.result.data.length != 0){
+        this.setData({
+          lib:res.result.data[0].lib
+        })
+        wx.hideLoading()
+      }
     })
   },
 
@@ -79,18 +80,28 @@ Page({
   },
 
   /**
-   * 跳转到书籍详情页面
+   * 用户注册
    */
-  toBook: function (event) {
+  register: function () {
     wx.showLoading({
-      title: '跳转中',
+      title: '注册中',
     })
-    console.log(event)
-    wx.navigateTo({
-      url: '../book/book?_id=' + event.currentTarget.id,
-      success: ()=>{
-        wx.hideLoading()
+    wx.cloud.callFunction({
+      name:'addUsr',
+      data:{
+        name: this.data.name,
+        phone: this.data.phone,
+        lib: this.data.lib
       }
+    }).then(res=>{
+      wx.hideLoading()
+      wx.showToast({
+        title: '注册成功',
+        duration: 2000
+      })
+      wx.redirectTo({
+        url: '../index/index',
+      })
     })
   }
 })

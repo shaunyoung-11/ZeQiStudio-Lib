@@ -1,27 +1,27 @@
 <view class="body">
   <view class="card personal-info">
-    <view class="avatar">
-      <image src="{{ avatarUrl }}"></image>
+    <view class="avatar" wx:if="{{ showUsrInfo }}">
+      <open-data type="userAvatarUrl"></open-data>
     </view>
-    <view class="name">
-      {{ name }}
+    <view class="name" wx:if="{{ showUsrInfo }}" bindgetuserinfo="bindgetuserinfo">
+      <open-data type="userNickName"></open-data>
     </view>
     <view class="sum">
-      <view class="sum-item">
+      <view class="sum-item" bindtap="toBorrow" id="total">
         <text class="info-title">累计已借</text>
-        <text>{{ totalBorrow }}</text>
+        <text>{{ totalBorrow.length }}</text>
       </view>
-      <view class="sum-item">
+      <view class="sum-item" bindtap="toBorrow" id="now">
         <text class="info-title">当前在借</text>
-        <text>{{ nowBorrow }}</text>
+        <text>{{ nowBorrow.length }}</text>
       </view>
     </view>
   </view>
-  <view class="card donate">
+  <view class="card donate" bindtap="scanBarCode">
     图书捐赠
   </view>
-  <view class="card library">
+  <view class="card library" bindtap="toLibrary">
     图书查询
   </view>
-  <text class="scan" bindtap="scanCode">+</text>
+  <button class="scan" bindtap="borrow" style="width: 50px;">+</button>
 </view>

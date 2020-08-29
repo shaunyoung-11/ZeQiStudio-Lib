@@ -1,0 +1,20 @@
+<view class="body">
+  <view class="container">
+    <text class="title">择栖阅读</text>
+    <text class="subTitle">一个快捷的图书角管理系统</text>
+    <view class="search">
+      <input class="search-text" type="text" placeholder="请输入姓名" model:value="{{ name }}"></input>
+      <text class="search-logo">✍</text>
+    </view>
+    <view class="search">
+      <input class="search-text" type="number" placeholder="请输入手机号码" model:value="{{ phone }}"></input>
+      <text class="search-logo">📞</text>
+    </view>
+    <view class="search">
+      <input class="search-text" type="text" placeholder="请输入图书角名称" model:value="{{ lib }}"></input>
+      <text class="search-logo">📕</text>
+    </view>
+    <button class="search-btn" bindtap="register">完成</button>
+    <text class="right">@择栖工作室</text>
+  </view>
+</view>

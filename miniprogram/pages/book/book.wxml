@@ -1,0 +1,24 @@
+<view class="body">
+  <view class="book">
+    <image class="book-cover" src="{{ cover }}"></image>
+    <view class="book-info">
+      <text class="name">{{ name }}</text>
+      <text class="press">{{ press }}</text>
+      <view class="state-info">
+        <text class="position">{{ position }}</text>
+        <text class="book-state book-state-y" wx:if="{{ state == true }}">可借阅</text>
+        <text class="book-state book-state-n" wx:else>已借出</text>
+      </view>
+    </view>
+  </view>
+  <view class="history">
+    <view class="history-item" wx:for="{{ record }}">
+      <image class="avatar" src="{{ item.avatar }}"></image>
+      <view class="usr-info">
+        <text class="nickname">{{ item.nickName }}</text>
+        <text class="time">{{ item.time }}</text>
+      </view>
+    </view>
+  </view>
+  <button wx:if="{{ state == true }}" class="borrow" bindtap="borrow" open-type="getUserInfo">借阅</button>
+</view>

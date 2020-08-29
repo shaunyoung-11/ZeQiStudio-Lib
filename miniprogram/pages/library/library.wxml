@@ -5,21 +5,21 @@
     <text class="logo">🔍</text>
   </view>
   <view class="book-container">
-    <view class="book">
+    <view class="book" wx:for="{{ books }}" bindtap="toBook" wx:key="_id" id="{{item._id}}">
       <view class="book-cover">
-        <image src="http://ebook.jason-xy.online:8083/cover/105"></image>
+        <image src="{{item.cover}}"></image>
       </view>
       <view class="book-info">
         <view class="book-info-item">
-          <text class="book-name">书名</text>
+          <text class="book-name">{{ item.name }}</text>
         </view>
         <view class="book-info-item">
-          <text class="book-press">出版社</text>
+          <text class="book-press">{{ item.press }}</text>
         </view>
-        <view class="book-info-item">
-          <text class="book-state book-state-y" wx:if="1">可借阅</text>
-          <text class="book-state book-state-n" wx:if="{{ 0 }}">已借出</text>
-        </view>
+      </view>
+      <view class="book-info-item">
+          <text class="book-state book-state-y" wx:if="{{ item.state == true }}">可借阅</text>
+          <text class="book-state book-state-n" wx:else>已借出</text>
       </view>
     </view>
   </view>

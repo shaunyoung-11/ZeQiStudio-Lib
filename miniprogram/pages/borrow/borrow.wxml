@@ -1,0 +1,17 @@
+<view class="body">
+  <view class="book-container">
+    <view class="book" wx:for="{{ books }}" bindlongtap="giveBack" wx:key="_id" id="{{item._id}}" data-isbn="{{ item.isbn }}">
+      <view class="book-cover">
+        <image src="{{item.cover}}"></image>
+      </view>
+      <view class="book-info">
+        <view class="book-info-item">
+          <text class="book-name">{{ item.name }}</text>
+        </view>
+        <view class="book-info-item">
+          <text class="book-press">{{ item.press }}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

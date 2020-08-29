@@ -2,11 +2,13 @@
   "pages": [
     "pages/index/index",
     "pages/library/library",
-    "pages/donate/donate"
+    "pages/donate/donate",
+    "pages/book/book",
+    "pages/borrow/borrow"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#f1f2f6",
     "navigationBarTextStyle": "black"
   },
   "style": "v2",

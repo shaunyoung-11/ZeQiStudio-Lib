@@ -1,30 +1,3 @@
-.search{
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: max-content;
-  position: relative;
-}
-
-.search .search-text{
-  width: 70%;
-  height: 100%;
-  padding: 8px 23px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-}
-
-.search .search-btn{
-  width: 30%;
-}
-
-.search .logo{
-  position: absolute;
-  left: 0;
-  top: 8px;
-  width: 5px;
-  height: 5px;
-}
-
 .book-container{
   width: 100%;
   display: grid;
@@ -77,24 +50,4 @@
   font-size: 0.8rem;
   color: #fff;
   font-weight: 200;
-}
-
-.book-state{
-  position: absolute;
-  right: 10rpx;
-  top: 10rpx;
-  bottom: unset;
-  left: unset;
-  padding: 5rpx 10rpx;
-  border-radius: 20rpx;
-  font-size: 0.75rem;
-  color: #fff;
-}
-
-.book-state-y{
-  background-color: green;
-}
-
-.book-state-n{
-  background-color: red;
 }
