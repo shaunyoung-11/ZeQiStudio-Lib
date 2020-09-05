@@ -1,5 +1,6 @@
 <view class="body">
-  <view class="book-container">
+  <view wx:if="{{ books.length == 0 }}" class="empty"></view>
+  <view wx:else class="book-container">
     <view class="book" wx:for="{{ books }}" bindlongtap="giveBack" wx:key="_id" id="{{item._id}}" data-isbn="{{ item.isbn }}">
       <view class="book-cover">
         <image src="{{item.cover}}"></image>

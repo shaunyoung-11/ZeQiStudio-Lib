@@ -26,6 +26,9 @@ Page({
         books: res.result.data
       })
       wx.hideLoading()
+      wx.showModal({
+        title: '长按可归还书籍',
+      })
     })
   },
 

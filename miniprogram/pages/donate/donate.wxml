@@ -3,8 +3,8 @@
     <image src="{{ cover }}" wx:if="{{ cover != '' }}"></image>
     <text wx:if="{{ cover == '' }}" bindtap="uploadImg">未找到信息！点击上传书籍封面</text>
     <text wx:if="{{ cover != '' }}" bindtap="uploadImg">点击更换书籍封面</text>
-    <input type="text" value="{{ name }}" placeholder="书籍名称"></input>
-    <input type="text" value="{{ press }}" placeholder="出版社"></input>
+    <input type="text" model:value="{{ name }}" placeholder="书籍名称"></input>
+    <input type="text" model:value="{{ press }}" placeholder="出版社"></input>
     <input type="text" model:value="{{ owner }}" placeholder="请输入图书角名称"></input>
     <input type="text" model:value="{{ position }}" placeholder="请输入图书放置位置"></input>
     <button bindtap="donate" wx:if="{{ name != '' && press != '' && owner != '' && cover != '' && position != '' }}">完成</button>
