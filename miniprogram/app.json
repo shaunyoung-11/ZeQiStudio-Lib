@@ -4,7 +4,8 @@
     "pages/library/library",
     "pages/donate/donate",
     "pages/book/book",
-    "pages/borrow/borrow"
+    "pages/borrow/borrow",
+    "pages/me/me"
   ],
   "window": {
     "backgroundTextStyle": "light",
